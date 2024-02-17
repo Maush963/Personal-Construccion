@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Aficiones e Intereses</title>
+    <link rel="stylesheet" href="lab3_css_a01710309.css">
+    <script src="lab4_js_a01710309.js"></script>
+</head>
+<body>
+
+    <h1 class="titulo">Mis gustos y yo - Maush (Mauricio Salas Hernández)</h1>
+    <p>Me gusta mucho dedicarme a varias actividades que me apasionan.</p>
+
+    <h2>Edición de Videos</h2>
+    <p>Disfruto mucho editando videos y creando contenido visual. Me encanta experimentar con diferentes técnicas y efectos para contar historias.</p>
+    <a href="https://youtu.be/zeON69tUDfE?t=11" class="enlace">Click para explotar</a>
+
+    <h2>Calistenia/Escalada</h2>
+    <p>Me gusta practicar tanto calistenia como escalada, son actividades que me llenan de energía y adrenalina.</p>
+
+    <h2>Cine y sus lecciones</h2>
+    <p>No soy de analizar las películas como cinéfilo, pero si me gusta preguntarme ¿Qué me puedo llevar de esta película?.</p>
+
+    <h2>Aprender</h2>
+    <p>Soy una persona a la que le gusta proponerse proyectos personales a menudo y me gusta aprender en el transcurso.</p>
+
+    <h2>Programación</h2>
+    <p>Me gusta más que nada el proceso de pensar una solución para un problema.</p>
+    <img src="https://th.bing.com/th/id/OIP.BjX9FyakvDa-rBjIGPsBLQHaHa?rs=1&pid=ImgDetMain" alt="Descripción de la imagen">
+
+    <h2>Preguntas y Respuestas sobre HTML5</h2>
+
+    <section>
+        <ul>
+            <li><p><strong>¿Cuál es la diferencia entre Internet y la World Wild Web?</strong> La diferencia es que Internet es una red de redes, mientras que la World Wide Web es un sistema de información que se encuentra en Internet.</p></li>
+            <li><p><strong>¿Cuáles son las partes de un URL?</strong> Esquema, nombre de dominio, ruta, parámetros y fragmento.</p></li>
+            <li>
+                <p>
+                    <strong>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</strong>
+                    <table>
+                        <tr>
+                            <td>GET </td>
+                            <td>Recuperar datos del servidor. <em>Es idempotente</em></td>
+                        </tr>
+                        <tr>
+                            <td>HEAD </td>
+                            <td>Similar a GET, pero solo solicita encabezados, sin cuerpo de respuesta. <em>Verificar existencia de un recurso</em></td>
+                        </tr>
+                        <tr>
+                            <td>POST </td>
+                            <td>Enviar datos al servidor para ser procesados y almacenados. <em>No es idempotente</em></td>
+                        </tr>
+                        <tr>
+                            <td>PUT</td>
+                            <td>Reemplazar todos los datos de un recurso en el servidor.</td>
+                        </tr>
+                        <tr>
+                            <td>PATCH</td>
+                            <td>Actualizar parcialmente un recurso en el servidor.</td>
+                        </tr>
+                        <tr>
+                            <td>DELETE</td>
+                            <td>Eliminar un recurso en el servidor.</td>
+                        </tr>
+
+                    </table>
+                </p>
+            </li>
+            <li><p><strong>¿Qué método de HTTP se debe utilizar al enviar un formulario HTML (Para contraseñas)?</strong> POST porque lo encripta, no va en el URL.</p></li>
+            <li><p><strong>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</strong> GET porque estás solicitando al servidor que te envíe los datos de la página web especificada por el URL.</p></li>
+            <li><p><strong>Un código 200 ¿qué significa?</strong> Indica que la solicitud ha tenido éxito.</p></li>
+            <li><p><strong>Error 404</strong> Indica que la página no se encontró.</p></li>
+            <li><p><strong>Error 505</strong> "Versión de HTTP no soportada".</p></li>
+            <li><p><strong>Menciona algunos elementos de HTML 4 que en HTML 5 estén desaprobados:</strong> "acronym", "applet", "big".</p></li>
+            <li><p><strong>¿Cuáles son las principales diferencias entre HTML 4 y HTML 5?</strong> HTML5 tiene nuevos elementos semánticos que facilitan la estructuración y comprensión del contenido de una página web.</p></li>
+            <li><p><strong>¿Qué componentes de estructura y estilo tiene una tabla?</strong> "Table" para tabla, "tr" para tabla, "td" para celda de datos en la tabla, "th" Define un encabezado de columna o fila en la tabla.</p></li>
+        </ul>
+    </section>
+
+    <form action="/ruta_de_procesamiento" method="post">
+        <input type="text" name="nombre" placeholder="Nombre">
+        <input type="email" name="email" placeholder="Correo electrónico">
+        <button type="submit">Enviar</button>
+    </form>
+    
+
+    <strong><h2>Preguntas y Respuestas sobre CSS</h2></strong>
+    <ol>
+        <li>
+            <h2>Como ingeniero de software ¿Cuál es tu recomendación sobre el uso de <code>!important</code> en un CSS?</h2>
+            <p>No usarlo excesivamente ya que sobrescribe el estilo previamente definido y puede causar conflictos.</p>
+        </li>
+        <li>
+            <h2>Si se pone una imagen de fondo en una página HTML, ¿Por qué debe escogerse con cuidado?</h2>
+            <p>Debe tener una resolución adecuada para que se vea bien en varios dispositivos y no debe ser muy pesado.</p>
+        </li>
+        <li>
+            <h2>Como ingeniero de software ¿Cuál es tu recomendación al elegir las unidades de una propiedad de estilo entre %, px y pt?</h2>
+            <p>Tienen usos distintos: "%" es para diseños responsivos y fluidos, "px" ofrece control preciso y "pt" es para impresiones.</p>
+        </li>
+        <li>
+            <h2>¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</h2>
+            <p>Hace que el archivo enviado al navegador sea más pequeño, lo que resulta en un tiempo de carga más rápido.</p>
+        </li>
+
+    </ol>
+    
+
+
+
+    <p>¡Gracias por visitar mi página!</p>
+    <footer>
+        <p>© 2024 Maush Todos los derechos reservados.</p>
+</body>
+</html>
