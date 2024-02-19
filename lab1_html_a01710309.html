@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="lab3_css_a01710309.css">
     <script src="lab4_js_a01710309.js"></script>
 </head>
-<body>
 
+<body>
     <h1 class="titulo">Mis gustos y yo - Maush (Mauricio Salas Hernández)</h1>
     <p>Me gusta mucho dedicarme a varias actividades que me apasionan.</p>
 
@@ -80,7 +80,7 @@
 
     <form action="/ruta_de_procesamiento" method="post">
         <input type="text" name="nombre" placeholder="Nombre">
-        <input type="email" name="email" placeholder="Correo electrónico">
+        <input type="email" name="email" placeholder="Esto es un ejemplo (No sirve)">
         <button type="submit">Enviar</button>
     </form>
     
@@ -105,6 +105,69 @@
         </li>
 
     </ol>
+
+    <strong><h2>Inciso de JavaScript</h2><strong>
+        <ul>
+            <h2>Preguntas a Responder</h2>
+            <li>
+                <h2>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</h2>
+                <p>	Su principal diferencia reside en el propósito para el que operan, Java es utilizado para desarrollo de aplicaciones, 
+                    mientras JavaScript es usado principalmente para desarrollo web. Ambos tienen Bibliotecas y marcos de trabajo específicos para sus áreas.</p>
+            </li>
+            <li>
+                <h2>¿Qué métodos tiene el objeto Date?</h2>
+                <p>getDate(), Devuelve el día de mes, getMonth(), Devuelve el mes, getFullYear(),Devuelve el año, getDay, devuelve el día de la semana *lunes*, 
+                    toDateString(), Devuelve la parte de la fecha de un objeto Date como una cadena legible.</p>
+            </li>
+            <li>
+                <h2>¿Qué métodos tienen los arreglos? </h2>
+                <p>Push(), agrega un o más elementos, Pop(), elimina el último elemento, Splice(), reemplaza elementos del arreglo, forEach(), 
+                    Ejecuta una función proporcionada una vez por cada elemento del arreglo, indexOf(), devuelve el índice del primer elemento 
+                    en el arreglo que coincida con el valor especificado.</p>
+            </li>
+            <li>
+                <h2>¿Cómo se declara una variable con alcance local dentro de una función?</h2>
+                <p>Simplemente se utiliza "var" o "const" dentro del cuerpo de una función.</p>
+            </li>
+            <li>
+                <h2>¿Qué implicaciones tiene que utilizar variables globales dentro de funciones?</h2>
+                <p>Además de afectar el rendimiento del código hace que sea más difícil de entender el flujo de datos que tiene el programa.</p>
+            </li>
+
+
+
+            <h2>Problemas</h2>
+
+            <h2>1: </h2>
+            <li><p>Entrada: un número pedido con un prompt. Salida: Una tabla con los números del 1 al número dado con sus cuadrados y cubos. 
+                Utiliza textContent para escribir la tabla en el documento HTML.</p></li>
+                <button onclick="tabla()" id="generarTabla">Generar tabla</button>
+
+            <h2>2: </h2>
+            <li><p>Entrada: Usando un prompt se pide el resultado de la suma de 2 números generados de manera Aleatoria.
+                Salida: Un mensaje que indica si el resultado fue correcto o no y el tiempo que tardó el usuario en responder.</p></li>
+                <button onclick="sumaAleatoria()" id="generarSuma">Generar suma</button>
+            
+            <h2>3: </h2>
+            <li><p>Función: Contador. Parámetros: Un arreglo de números. Regresa: La cantidad de números negativos en el arreglo, la cantidad de 0's,
+                y la cantidad de valores mayores a 0 en el arreglo.</p></li>
+                <button onclick="contadorArreglo()" id="contadorArreglo">Contar Arreglo</button>
+
+            <h2>4: </h2>
+            <li><p>Funcion: promedios. Parámentros: Un arreglo de números. Regresa: Un arreglo con los promedios de cada uno 
+                de los renglones de la matriz.
+            </p></li>
+                <button onclick="promedioMatriz()" id="promedioMatriz">Contar Matriz</button>
+
+            <h2>5: </h2>
+            <li><p>Función: Inverso. Parámetros: Un número. Regresa: El número con sus dígitos en orden inverso.</p></li>
+                <button onclick="inverso()" id="inverso">Número inverso</button>
+
+            <h2>6: </h2>
+            <li><p>Función: Librería. Parámetros: Nombre de un libro. Regresa: Un objeto con el nombre del libro.
+                (El constructor debe tener por lo menos dos métodos)</p></li>
+                <button onclick="libreria()" id="libreria">Agregar Libros</button>
+          </ul>
     
 
 
