@@ -2,27 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <script src="https://cdn.tailwindcss.com"></script>
-    <script> </script>
-    <title>Document</title>
+    <title> Lab6 </title>
 </head>
 <body>
-    <p>
-    Con JavaScript y HTML5 [y quizás CSS], desarrolla una página para validar passwords. 
-    La página debe tener una forma con 2 campos, el campo de password, y el campo de verificar password. 
-    Utiliza al máximo tu creatividad e ingeniería para que la página sea un validador de passwords de estado del arte, 
-    con la mejor experiencia para el usuario.
-    </p>
-    <form action="Lab6_POE_A01710309.php" method="post">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <br>
-        <label for="password2">Verify Password:</label>
-        <input type="password" id="password2" name="password2" required>
-        <br>
-        <input type="submit" value="Submit">
-    </form>
+<div id="grande">
+    <div id="myDiv">
+        <p >
+        Con JavaScript y HTML5 [y quizás CSS], desarrolla una página para validar passwords. <br>
+        La página debe tener una forma con 2 campos, el campo de password, y el campo de verificar password. <br>
+        Utiliza al máximo tu creatividad e ingeniería para que la página sea un validador de <br>
+        passwords de estado del arte, con la mejor experiencia para el usuario.
+        </p>
+    </div>
+    <div id="secDiv">
+        <form id="CorroborarContraseña">
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <label for="password2">Verificar Contraseña:</label>
+            <input type="password" id="password2" name="password2" required><br><br>
+            <input type="submit" value="Submit" id="boton">
+        </form>
+    </div>
 
+    <div id="dospuntouno">
+        <h2 style="font-size: larger; font-weight: bold;">Sección de preguntas y respuestas</h2>
+        <p style = "font-style:italic;margin: 4px;">¿Porque es buena práctica usar JavaScript para checar que sean válidos los inputs de 
+            <br>las formas antes de enviar los datos al servidor?</p>
+        <p>Porque de esta manera se evita que el servidor reciba datos 
+            <br>que no son válidos y se ahorra tiempo y recursos.</p>
+
+        <p style = "font-style:italic;margin: 4px;">¿Cómo puedes saltarle la seguridad de validaciones hechas con JavaScript?</p>
+        <p>Usando el inspector de elementos y cambiando el valor de los inputs</p>
+
+        <p style = "font-style:italic;margin: 4px;">Si te puedes saltar la seguridad de las validaciones de JavaScript,
+            <br> entonces ¿Por qué la primera pregunta dice que es buena práctica?</p>
+        <p>Porque aunque se pueda saltar la seguridad de las validaciones de JavaScript,
+            <br> se evita que el servidor reciba datos que no son válidos y se ahorra tiempo y recursos.</p>
+    </div>
+
+    <div id="terDiv">
+        <p>Ahora vamos a hacer un botón para cambiar la fuente de la letra cuando le presionen con un onClick</p>
+        <button id="boton2" onclick="cambiarFuente()">Cambiar Fuente</button>
+    </div>
+    <div id="cuarDiv">
+        <p>Ahora vamos a hacer una sección que aparezca de una forma dinámica al picarle a un botón</p>
+        <button id="mostrarDiv">Mostrar quintoDiv</button>    
+    </div>
+
+<div id="quintoDiv">
+  Este es mi quintoDiv   :D
+</div>
+
+</div>
 </body>
+<script src="Lab6JS.js"></script>
 </html>
