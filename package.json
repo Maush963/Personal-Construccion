@@ -1,0 +1,23 @@
+{
+  "name": "lab8",
+  "version": "1.0.0",
+  "description": "Laboratorio 8 Construccion software",
+  "main": "Lab8.js",
+  "scripts": {
+    "start": "nodemon Lab8.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maush963/Personal-Construccion.git"
+  },
+  "keywords": [
+    "tc2005"
+  ],
+  "author": "Mau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Maush963/Personal-Construccion/issues"
+  },
+  "homepage": "https://github.com/Maush963/Personal-Construccion#readme"
+}
