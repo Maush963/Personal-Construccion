@@ -1,0 +1,34 @@
+<%- include('includes/head.ejs') %>
+
+    <h1>ESTO ES UNA PRUEBA</h1>
+    <%= variable %>
+    <h1>Estructura de control con EJS</h1>
+    <% if (true) { %>
+        <h2>Esto es verdadero</h2>
+    <% } else { %>
+        <h2>Esto es falso</h2>
+    <% } %>
+    <ul>
+        <% for (let i = 0; i < 5; i++) { %>
+            <li><%= i %></li>
+        <% } %>
+    </ul>
+    <ul>
+        <% for (let i = 0; i < 5; i++) { %>
+            <% if (i % 2 === 0) { %>
+                <li><%= i %></li>
+            <% } %>
+        <% } %>
+    </ul>
+    <ul>
+        <% for (let i = 0; i < 5; i++) { %>
+            <% if (i % 2 === 0) { %>
+                <li><%= i %></li>
+            <% } else { %>
+                <li>Impar</li>
+            <% } %>
+        <% } %>
+    </ul>
+    <%- include('includes/footer.ejs') %>
+</body>
+</html>
