@@ -1,0 +1,25 @@
+
+      
+<%- include ('includes/head.ejs')%>
+<h2 class="title">Welcome to the Summoner's Rift!</h2>
+<div class="columns">
+    <% for (let champion of champions){ %>
+        <div class="column">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="<%= champion.image %>" alt="<%= champion.name %>">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <p class="title is-4"><span><%=champion.name%></span></p>
+                    <p>Level: <span><%=champion.level%></span></p>
+                    <p>Health: <span><%=champion.health%></span></p>
+                    <p>Attack: <span><%=champion.attack%></span></p>
+                </div>
+            </div>
+        </div>
+        <%- include ('includes/foot.ejs')%>
+<%  }  %>
+
+<%- include ('includes/foot.ejs')%>

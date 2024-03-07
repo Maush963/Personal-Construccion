@@ -1,0 +1,48 @@
+
+      
+<%- include ('includes/head.ejs')%>
+      <h2 class="title">Create Your Champion</h2>
+        <form action="/champion" method="post">
+            <div class="field">
+                <label class="label">Name</label>
+                <div class="control">
+                    <input class="input" type="text" name="name" placeholder="Champion Name">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Level</label>
+                <div class="control">
+                    <input class="input" type="number" name="level" placeholder="Champion Level">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Health</label>
+                <div class="control">
+                    <input class="input" type="number" name="health" placeholder="Champion Health">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Attack</label>
+                <div class="control">
+                    <input class="input" type="number" name="attack" placeholder="Champion Attack">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Image URL</label>
+                <div class="control">
+                    <input class="input" type="text" name="image" placeholder="URL of Champion Image">
+                </div>
+            </div>
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-link" type="submit">Submit</button>
+                </div>
+                <div class="control">
+                    <button class="button is-link is-light" type="reset">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<%- include ('includes/foot.ejs')%>
