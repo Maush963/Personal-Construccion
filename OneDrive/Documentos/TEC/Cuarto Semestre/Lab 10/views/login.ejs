@@ -1,0 +1,28 @@
+
+
+<%- include ('includes/head.ejs', {username: username})%>
+<h2 class="title">Login</h2>
+<form action="/users/login" method="post">
+    <div class="field">
+        <label class="label">Username</label>
+        <div class="control">
+            <input class="input" type="text" name="username" placeholder="Username">
+        </div>
+    </div>
+    <div class="field">
+        <label class="label">Password</label>
+        <div class="control">
+            <input class="input" type="password" name="password" placeholder="Password">
+        </div>
+    </div>
+    <div class="field is-grouped">
+        <div class="control">
+            <button class="button is-link" type="submit">Submit</button>
+        </div>
+        <div class="control">
+            <button class="button is-link is-light" type="reset">Reset</button>
+        </div>
+    </div>
+</form>
+
+<%- include ('includes/foot.ejs')%>

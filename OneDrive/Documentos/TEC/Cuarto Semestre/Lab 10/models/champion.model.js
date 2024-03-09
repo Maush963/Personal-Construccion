@@ -17,12 +17,12 @@ const champions = [
 
   module.exports = class Champion {
     //the constructor is used to initialize the object
-    constructor(name, level, health, attack, image) {
-      this.name = name;
-      this.level = level;
-      this.health = health;
-      this.attack = attack;
-      this.image = image;
+    constructor(my_name, my_level, my_health, my_attack, my_image) {
+      this.name = my_name;
+      this.level = my_level;
+      this.health = my_health;
+      this.attack = my_attack;
+      this.image = my_image;
     }
   //the function save() is a method of the model that saves the data in the database
     save() {

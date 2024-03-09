@@ -1,6 +1,6 @@
 
       
-<%- include ('includes/head.ejs')%>
+<%- include ('includes/head.ejs', {username: username})%>
 <h2 class="title">Welcome to the Summoner's Rift!</h2>
 <div class="columns">
     <% for (let champion of champions){ %>
@@ -19,7 +19,6 @@
                 </div>
             </div>
         </div>
-        <%- include ('includes/foot.ejs')%>
 <%  }  %>
-
+</div>
 <%- include ('includes/foot.ejs')%>
