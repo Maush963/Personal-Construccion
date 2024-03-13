@@ -4,6 +4,7 @@ const champController = require('../controllers/champion.controllers');
 
 router.get('/', champController.get_root);
 router.post('/champion', champController.post_champion);
+router.get('/champion/:champion_id', champController.get_root);
 router.get('/create', champController.get_create);
 
 

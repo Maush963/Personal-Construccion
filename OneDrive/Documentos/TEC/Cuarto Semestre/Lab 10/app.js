@@ -48,6 +48,8 @@ app.use((req, res, next) => {
     res.render('404');
 });
 
+
+
 app.listen(3000, () => {
     console.log('Server is running on port 3000');
 });
