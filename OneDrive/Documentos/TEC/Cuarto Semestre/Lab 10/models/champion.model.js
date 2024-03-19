@@ -35,6 +35,14 @@ const db = require('../util/database');
     static fetchOne(id) {
       return db.execute('SELECT * FROM champion WHERE id = ?', [id]);
     }
+
+    static update(id, name, level, health, attack, image) {
+      return db.execute(`UPDATE champion SET 
+          name = ?, level = ?, health = ?, attack = ?, image = ?
+          WHERE id = ?`, 
+          [name, level, health, attack, image, id]);
+  }
+  
 }
 
 

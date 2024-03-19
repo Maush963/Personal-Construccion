@@ -1,5 +1,6 @@
 
-<%- include ('includes/head.ejs', {username: username})%>
+<%- include ('includes/head.ejs', {username: username,
+    permissions:permissions,})%>
 <h2 class="title"><% if (register) {%> "Únete a la grieta" <%} else {%> "Bienvenido" <%} %></h2>
 <% if (error != '') {%>
     <div class="notification is-danger">

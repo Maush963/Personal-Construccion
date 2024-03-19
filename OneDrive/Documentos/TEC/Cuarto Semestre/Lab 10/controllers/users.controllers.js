@@ -10,6 +10,7 @@ exports.get_login = (request, response, next) => {
         username: request.session.username || "",
         register: false,
         error: error,
+        permissions: request.session.permissions || [],
     });
 }
 
@@ -23,15 +24,21 @@ exports.post_login = (request, response, next) => {
             bcrypt.compare(request.body.password, user.password)
             .then((doMatch) => {
                 if (doMatch) {  
-                    request.session.username = request.body.username;
-                    request.session.isLoggedIn = true;
-                    response.redirect('/');
-                } else {
+                    User.getPermissions(user.username)
+                    .then(([permissions, fieldData]) => {
+                        console.log(permissions);
+                        request.session.permissions = permissions;
+                        request.session.username = user.name;
+                        request.session.isLoggedIn = true;
+                        response.redirect('/champions');
+                    })
+                    .catch(err=> {console.log(err); });
+                }else { 
                     request.session.error = "Usuario o contraseña incorrectos";
                     response.redirect('/users/login');
                 }
             })
-            .catch(err=> {console.log(err); });
+
         }
         else {
             request.session.error = "Usuario o contraseña incorrectos";
@@ -55,6 +62,7 @@ exports.get_signup = (request, response, next) => {
         username: request.session.username || "",
         register: true,
         error: error,
+        permissions: request.session.permissions || [],
     });
 };
 
@@ -66,4 +74,6 @@ exports.post_signup = (request, response, next) => {
         response.redirect('/users/login');
     })
     .catch(err => console.log(err));
+    request.session.error = 'Nombre de usuario no disponible';
+    response.redirect('/users/signup');
 };

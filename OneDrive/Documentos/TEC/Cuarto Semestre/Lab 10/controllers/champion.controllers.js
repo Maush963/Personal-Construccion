@@ -4,6 +4,7 @@ exports.get_create = (req, res) => {
     res.render("create",{
         username: req.session.username || "",
         csrfToken: req.csrfToken(),
+        permissions: req.session.permissions || [],
     });
 }  // Path: views/create.ejs
 
@@ -27,6 +28,7 @@ exports.get_root = (req, res) => {
         champions: rows,
         last_champ: req.cookies.last_champ || '',
         username: req.session.username || '',
+        permissions: req.session.permissions || [],
     });
 }).catch(err => console.log(err));
 } 

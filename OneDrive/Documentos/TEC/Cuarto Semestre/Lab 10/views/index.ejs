@@ -1,6 +1,7 @@
 
       
-<%- include ('includes/head.ejs', {username: username})%>
+<%- include ('includes/head.ejs', {username: username,
+                                permissions:permissions,})%>
 <h2 class="title">Welcome to the Summoner's Rift!</h2>
 <div class="columns">
     <% for (let champion of champions){ %>

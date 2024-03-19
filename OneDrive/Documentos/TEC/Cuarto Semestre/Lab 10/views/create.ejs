@@ -1,6 +1,7 @@
 
       
-<%- include ('includes/head.ejs', {username: username})%>
+<%- include ('includes/head.ejs', {username: username,
+    permissions:permissions,})%>
 <section class="section">
       <h2 class="title">Create Your Champion</h2>
         <form action="/champion" method="post">
