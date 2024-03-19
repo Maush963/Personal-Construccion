@@ -21,7 +21,7 @@ SET time_zone = "+00:00";
 -- Base de datos: `league_of_legends`
 --
 
--- --------------------------------------------------------
+----------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `champion`

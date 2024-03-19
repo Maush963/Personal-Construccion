@@ -3,6 +3,7 @@ const Champion = require('../models/champion.model');
 exports.get_create = (req, res) => {
     res.render("create",{
         username: req.session.username || "",
+        csrfToken: req.csrfToken(),
     });
 }  // Path: views/create.ejs
 

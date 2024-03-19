@@ -1,28 +1,30 @@
 
-
 <%- include ('includes/head.ejs', {username: username})%>
-<h2 class="title">Login</h2>
-<form action="/users/login" method="post">
+<h2 class="title"><% if (register) {%> "Únete a la grieta" <%} else {%> "Bienvenido" <%} %></h2>
+<% if (error != '') {%>
+    <div class="notification is-danger">
+        <strong><%= error %></strong>
+    </div>
+<% } %>
+<form action="/users/<% if (register) {%>signup<%} else {%>login<%} %>" method="POST">
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>"> 
     <div class="field">
-        <label class="label">Username</label>
+        <label class="label">Username</label>   
         <div class="control">
-            <input class="input" type="text" name="username" placeholder="Username">
+            <input class="input text" id="username" name="username" placeholder="Username">
         </div>
     </div>
+    <% if (register) {%>
+        <label class="label" for="name">Complete Name</label>
+        <input class="input text" id="name" name="name" placeholder="Name">
+        <% } %>
     <div class="field">
         <label class="label">Password</label>
         <div class="control">
             <input class="input" type="password" name="password" placeholder="Password">
         </div>
     </div>
-    <div class="field is-grouped">
-        <div class="control">
-            <button class="button is-link" type="submit">Submit</button>
-        </div>
-        <div class="control">
-            <button class="button is-link is-light" type="reset">Reset</button>
-        </div>
-    </div>
+    <input class="button is-success" type="submit" value="<% if (register) { %>¡Unirme!<% } else { %>Entrar<% } %>">
 </form>
 
 <%- include ('includes/foot.ejs')%>

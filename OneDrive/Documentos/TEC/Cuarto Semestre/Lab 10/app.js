@@ -10,14 +10,26 @@ app.use(session({
     saveUninitialized: false, //Asegura que no se guarde una sesión para una petición que no lo necesita
 }));
 
-//cookie-parser
-const cookieParser = require('cookie-parser');
-app.use(cookieParser());
 
 //Body-parser
 const bodyParser = require('body-parser'); 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+//Protection against CSRF
+const csrf = require('csurf');
+const csrfProtection = csrf();
+app.use(csrfProtection);
+
+//csrf token
+app.use((request, response, next) => {
+    response.locals.csrfToken = request.csrfToken();
+    next();
+});
+
+//cookie-parser
+const cookieParser = require('cookie-parser');
+app.use(cookieParser());
 
 //EJS
 app.set('view engine', 'ejs');
@@ -35,7 +47,6 @@ app.use('/', misRutas);
 const path = require('path');
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 //Middleware
 app.use((req, res, next) => {
     console.log("Middleware 1");
@@ -45,7 +56,7 @@ app.use((req, res, next) => {
 //Not found
 app.use((req, res, next) => {
     res.status(404);
-    res.render('404');
+    res.render('404', { username: req.session.username || "" });
 });
 
 
