@@ -4,12 +4,14 @@
                                 permissions:permissions,})%>
 <h2 class="title">Welcome to the Summoner's Rift!</h2>
 <div class="columns">
+    <% let columns = 0; %>
     <% for (let champion of champions){ %>
+        <% columns++ %>
         <div class="column">
             <div class="card">
                 <div class="card-image">
                     <figure class="image is-4by3">
-                        <img src="<%= champion.image %>" alt="<%= champion.name %>">
+                        <img src="/uploads/<%= champion.image %>" alt="<%= champion.name %>">
                     </figure>
                 </div>
                 <div class="card-content">
@@ -20,6 +22,10 @@
                 </div>
             </div>
         </div>
+            <% if (columns % 5 == 0) { %>
+        </div>
+        <div class="columns">
+    <% } %>
 <%  }  %>
 </div>
 <%- include ('includes/foot.ejs')%>

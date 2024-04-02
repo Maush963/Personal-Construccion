@@ -30,7 +30,7 @@ exports.post_login = (request, response, next) => {
                         request.session.permissions = permissions;
                         request.session.username = user.name;
                         request.session.isLoggedIn = true;
-                        response.redirect('/champions');
+                        response.redirect('/');
                     })
                     .catch(err=> {console.log(err); });
                 }else { 

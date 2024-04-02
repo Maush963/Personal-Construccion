@@ -14,10 +14,11 @@ const db = require('../util/database');
 
   //the function save() is a method of the model that saves the data in the database
     save() {
-      return db.execute('INSERT INTO champion (name, level, health, attack, image) VALUES (?, ?, ?, ?, ?)',
+      return db.execute('CALL createChamp(?, ?, ?, ?, ?)',
       [this.name, this.level, this.health, this.attack, this.image]
       );
     }
+
   //the function fetchAll() is a method of the model that returns all the data from the database
     static fetchAll() {
       return db.execute('SELECT * FROM champion');
@@ -35,14 +36,7 @@ const db = require('../util/database');
     static fetchOne(id) {
       return db.execute('SELECT * FROM champion WHERE id = ?', [id]);
     }
-
-    static update(id, name, level, health, attack, image) {
-      return db.execute(`UPDATE champion SET 
-          name = ?, level = ?, health = ?, attack = ?, image = ?
-          WHERE id = ?`, 
-          [name, level, health, attack, image, id]);
-  }
-  
+    
 }
 
 

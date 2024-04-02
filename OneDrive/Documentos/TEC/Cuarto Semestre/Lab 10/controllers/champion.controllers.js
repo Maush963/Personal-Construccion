@@ -11,7 +11,8 @@ exports.get_create = (req, res) => {
 
 exports.post_champion = (req, res) => {
     console.log(req.body);
-    const myChampion = new Champion(req.body.name, req.body.level, req.body.health, req.body.attack, req.body.image);
+    console.log(req.file);
+    const myChampion = new Champion(req.body.name, req.body.level, req.body.health, req.body.attack, req.file.filename);
     myChampion.save().then(([rows, fieldData]) => {
     res.setHeader('Set-Cookie', 'last_champ=' + myChampion.name + '; HttpOnly');
     res.redirect("/");
